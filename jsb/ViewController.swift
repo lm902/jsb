@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     
     private var _turn: Turn = Turn.P1_TURN
-    
     var turn: Turn {
         get {
             return _turn
