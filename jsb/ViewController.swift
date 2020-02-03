@@ -20,9 +20,58 @@ class ViewController: UIViewController {
     @IBOutlet weak var p2Image: UIImageView!
     @IBOutlet weak var actionButton: UIButton!
     
-    var turn: Turn = Turn.P1_TURN
-    var figure1: Figure = Figure()
-    var figure2: Figure = Figure()
+    private var _turn: Turn = Turn.P1_TURN
+    
+    var turn: Turn {
+        get {
+            return _turn
+        }
+        set {
+            switch newValue {
+            case Turn.P1_TURN:
+                statusLabel.text = "玩家1回合"
+                actionButton.setTitle("玩家1拼脸", for: .normal)
+                break
+            case Turn.P2_TURN:
+                statusLabel.text = "玩家2回合"
+                actionButton.setTitle("玩家2拼脸", for: .normal)
+                break
+            case Turn.END_TURN:
+                if figure1 > figure2 {
+                    statusLabel.text = "玩家1获胜"
+                } else if figure1 < figure2 {
+                    statusLabel.text = "玩家2获胜"
+                } else if figure1 == figure2 {
+                    statusLabel.text = "平手"
+                }
+                actionButton.setTitle("下一回合", for: .normal)
+                break
+            }
+            _turn = newValue
+        }
+    }
+    
+    private var _figure1: Figure = Figure()
+    var figure1: Figure {
+        get {
+            return _figure1
+        }
+        set {
+            p1Image.image = newValue.image
+            _figure1 = newValue
+        }
+    }
+    
+    private var _figure2: Figure = Figure()
+    var figure2: Figure {
+        get {
+            return _figure2
+        }
+        set {
+            p2Image.image = newValue.image
+            _figure2 = newValue
+        }
+    }
     
     let figures: [Figure] = [Rock(), Paper(), Scissors()]
     
@@ -42,37 +91,11 @@ class ViewController: UIViewController {
             turn = Turn.P1_TURN
             break
         }
-        updateDisplay()
-    }
-    
-    func updateDisplay() {
-        p1Image.image = figure1.image
-        p2Image.image = figure2.image
-        switch turn {
-        case Turn.P1_TURN:
-            statusLabel.text = "玩家1回合"
-            actionButton.setTitle("玩家1拼脸", for: .normal)
-            break
-        case Turn.P2_TURN:
-            statusLabel.text = "玩家2回合"
-            actionButton.setTitle("玩家2拼脸", for: .normal)
-            break
-        case Turn.END_TURN:
-            if figure1 > figure2 {
-                statusLabel.text = "玩家1获胜"
-            } else if figure1 < figure2 {
-                statusLabel.text = "玩家2获胜"
-            } else if figure1 == figure2 {
-                statusLabel.text = "平手"
-            }
-            actionButton.setTitle("下一回合", for: .normal)
-            break
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateDisplay()
+        turn = Turn.P1_TURN
     }
 
 
