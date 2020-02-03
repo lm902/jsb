@@ -15,6 +15,10 @@
 		3E13883923E8CC6700EC31EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E13883723E8CC6700EC31EB /* LaunchScreen.storyboard */; };
 		3E13884423E8CC6700EC31EB /* jsbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13884323E8CC6700EC31EB /* jsbTests.swift */; };
 		3E13884F23E8CC6700EC31EB /* jsbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13884E23E8CC6700EC31EB /* jsbUITests.swift */; };
+		3E13885E23E8CF5600EC31EB /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13885D23E8CF5600EC31EB /* Figure.swift */; };
+		3E13886023E8D01100EC31EB /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13885F23E8D01100EC31EB /* Rock.swift */; };
+		3E13886223E8D33700EC31EB /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13886123E8D33700EC31EB /* Paper.swift */; };
+		3E13886423E8D38A00EC31EB /* Scissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13886323E8D38A00EC31EB /* Scissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3E13884A23E8CC6700EC31EB /* jsbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E13884E23E8CC6700EC31EB /* jsbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsbUITests.swift; sourceTree = "<group>"; };
 		3E13885023E8CC6700EC31EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E13885D23E8CF5600EC31EB /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		3E13885F23E8D01100EC31EB /* Rock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
+		3E13886123E8D33700EC31EB /* Paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
+		3E13886323E8D38A00EC31EB /* Scissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scissors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				3E13883523E8CC6700EC31EB /* Assets.xcassets */,
 				3E13883723E8CC6700EC31EB /* LaunchScreen.storyboard */,
 				3E13883A23E8CC6700EC31EB /* Info.plist */,
+				3E13885D23E8CF5600EC31EB /* Figure.swift */,
+				3E13885F23E8D01100EC31EB /* Rock.swift */,
+				3E13886123E8D33700EC31EB /* Paper.swift */,
+				3E13886323E8D38A00EC31EB /* Scissors.swift */,
 			);
 			path = jsb;
 			sourceTree = "<group>";
@@ -259,7 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E13886423E8D38A00EC31EB /* Scissors.swift in Sources */,
+				3E13886023E8D01100EC31EB /* Rock.swift in Sources */,
 				3E13883123E8CC6300EC31EB /* ViewController.swift in Sources */,
+				3E13886223E8D33700EC31EB /* Paper.swift in Sources */,
+				3E13885E23E8CF5600EC31EB /* Figure.swift in Sources */,
 				3E13882D23E8CC6300EC31EB /* AppDelegate.swift in Sources */,
 				3E13882F23E8CC6300EC31EB /* SceneDelegate.swift in Sources */,
 			);
